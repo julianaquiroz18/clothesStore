@@ -1,0 +1,20 @@
+@import '../../utils/styles/functions.scss';
+.Categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    &-img {
+        margin-top: vw(40.36, 751);
+        width: vw(666.65, 751);
+        height: vw(500.46, 751);
+        //max-width: 841.68px;
+        //max-height: 631.86px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Categories-img {
+        width: vw(448.9, 1024);
+        height: vw(337, 1024);
+    }
+}

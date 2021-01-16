@@ -1,0 +1,114 @@
+@import '../../utils/styles/functions.scss';
+.Footer {
+    background-color: black;
+    color: white;
+    padding-top: vw(75, 791);
+    &-information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-block {
+        padding: 0 30px;
+        width: 70vw;
+        text-align: left;
+        &:not(:nth-last-child(1)) {
+            border-bottom: 1px solid white;
+        }
+        &-titleContainer {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-plusButton {
+            border: none;
+            cursor: pointer;
+            outline: none;
+            background-color: black;
+            color: white;
+            font-size: vw(32, 791);
+        }
+        &-title {
+            margin: vw(35, 791) 0;
+            font-size: vw(33, 791);
+            text-align: left;
+        }
+        &-list {
+            list-style: none;
+            text-align: left;
+            display: none;
+            padding: 0;
+            font-size: vw(26, 791);
+            &>* {
+                margin-bottom: 17.61px;
+            }
+            &.isOpen {
+                display: block;
+            }
+        }
+    }
+    &-socialNetworks {
+        display: inline-flex;
+        margin-left: -10px;
+        margin-bottom: vw(124, 791);
+        &-button {
+            width: vw(63, 791);
+            height: vw(63, 791);
+            border: none;
+            padding: vw(12.2, 791);
+            margin: 0 10px;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+            border-radius: 50%;
+        }
+    }
+    &-copyRight {
+        font-size: vw(23, 791);
+        padding: 0 0 47px 0;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Footer {
+        padding-top: vw(40, 1024);
+        &-information {
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 0 vw(194.5, 1024) 55px vw(115.35, 1024);
+        }
+        &-block {
+            &:not(:nth-last-child(1)) {
+                border-bottom: none;
+            }
+            &:nth-last-child(2) {
+                display: none;
+            }
+            &-title {
+                font-size: vw(17.6, 1024);
+                margin: vw(18.66, 1034) 0;
+            }
+            &-list {
+                font-size: vw(13.86, 1024);
+                margin-top: 0;
+                display: block;
+            }
+            &-plusButton {
+                display: none;
+            }
+        }
+        &-socialNetworks {
+            margin-bottom: 0;
+            &-button {
+                width: vw(33.6, 1024);
+                height: vw(33.6, 1024);
+                padding: vw(6.5, 1024);
+            }
+        }
+        &-copyRight {
+            border: 1px solid white;
+            padding: 27px 0;
+            font-size: vw(12.26, 1024);
+        }
+    }
+}
