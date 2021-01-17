@@ -1,6 +1,5 @@
 @import '../../utils/styles/functions.scss';
 .Card {
-    background-color: turquoise;
     width: vw(400, 751);
     &-imageContainer {
         position: relative;
@@ -23,7 +22,7 @@
     }
     &-description {
         padding: 0 7%;
-        text-align: justify;
+        text-align: left;
         font-size: vw(32.04, 751);
         margin: vw(32.38, 751) 0 vw(47.81, 751);
     }
@@ -47,28 +46,27 @@
 
 @media screen and(min-width: 1024px) {
     .Card {
-        background-color: turquoise;
         width: 300px;
         &-imageContainer {
             &-discountTag {
-                font-size: 22.52px;
-                line-height: 35px;
-                width: 87px;
-                height: 35px;
+                font-size: vw(22.52, 1920);
+                line-height: vw(35, 1920);
+                width: vw(87, 1920);
+                height: vw(35, 1920);
             }
             &-image {
-                margin-top: -35px;
-                width: 247px;
-                height: 368px;
+                margin-top: -(vw(35, 1920));
+                width: vw(253, 1920);
+                height: vw(366, 1920);
             }
         }
         &-description {
-            font-size: 23.19px;
-            margin: 32.38px 0 33.7px;
+            font-size: vw(23.19, 1920);
+            margin: vw(32.38, 1920) 0 vw(33.7, 1920);
         }
         &-prices {
             &>* {
-                font-size: 27px;
+                font-size: vw(27, 1920);
             }
         }
     }

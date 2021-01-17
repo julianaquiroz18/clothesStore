@@ -27,11 +27,8 @@ class Carrousel extends Component {
       <div className="Carrousel">
         <h2 className="Carrousel-title">PRODUCTOS MÁS BUSCADOS</h2>
         <div className="Carrousel-container">
-          <div className="Carrousel-container-cards">
-              <div className="Carrousel-cardsWrapper">
-
-              {cards}
-              </div>
+          <div className="Carrousel-container-cards">              
+              {cards}            
           </div>
           <div className="Carrousel-container-buttons">
             <button className="button">

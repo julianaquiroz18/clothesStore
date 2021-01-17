@@ -7,7 +7,6 @@
     &-container {
         position: relative;
         margin: vw(44.21, 751) 0 vw(83.01, 751);
-        background-color: tomato;
         &-buttons {
             position: absolute;
             width: 100%;
@@ -15,8 +14,13 @@
             box-sizing: border-box;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             top: 50%;
+            transform: translateY(-50%);
             & .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 border: none;
                 padding: 0;
                 cursor: pointer;
@@ -28,18 +32,17 @@
             }
         }
         &-cards {
-            width: 100vw;
+            width: 85vw;
             overflow-x: scroll;
+            //overflow: hidden;
+            display: inline-flex;
+            flex-direction: row;
         }
     }
     &-cardWrapper {
-        min-width: 100vw;
+        min-width: 100%;
         display: inline-flex;
         justify-content: center;
-    }
-    &-cardsWrapper {
-        display: inline-flex;
-        flex-direction: row;
     }
 }
 
@@ -56,6 +59,11 @@
                     font-size: vw(38.97, 1024);
                 }
             }
+        }
+        &-cardWrapper {
+            min-width: 25%;
+            box-sizing: border-box;
+            padding: 30px;
         }
     }
 }
