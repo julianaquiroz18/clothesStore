@@ -1,0 +1,75 @@
+@import '../../utils/styles/functions.scss';
+.Card {
+    background-color: turquoise;
+    width: vw(400, 751);
+    &-imageContainer {
+        position: relative;
+        &-discountTag {
+            position: relative;
+            background-color: #5B17AA;
+            color: white;
+            font-size: vw(22.52, 751);
+            line-height: vw(35, 751);
+            width: vw(87, 751);
+            height: vw(35, 751);
+            z-index: 2;
+        }
+        &-image {
+            margin-top: -(vw(35, 751));
+            width: vw(351.39, 751);
+            height: vw(514.43, 751);
+            min-width: 150px;
+        }
+    }
+    &-description {
+        padding: 0 7%;
+        text-align: justify;
+        font-size: vw(32.04, 751);
+        margin: vw(32.38, 751) 0 vw(47.81, 751);
+    }
+    &-prices {
+        display: flex;
+        justify-content: space-between;
+        &>* {
+            font-size: vw(37.3, 751);
+            margin: 0;
+            padding: 0 2%;
+        }
+        &-old {
+            color: #6B6B6B;
+            text-decoration-line: line-through;
+        }
+        &-new {
+            color: #5B17AA;
+        }
+    }
+}
+
+@media screen and(min-width: 1024px) {
+    .Card {
+        background-color: turquoise;
+        width: 300px;
+        &-imageContainer {
+            &-discountTag {
+                font-size: 22.52px;
+                line-height: 35px;
+                width: 87px;
+                height: 35px;
+            }
+            &-image {
+                margin-top: -35px;
+                width: 247px;
+                height: 368px;
+            }
+        }
+        &-description {
+            font-size: 23.19px;
+            margin: 32.38px 0 33.7px;
+        }
+        &-prices {
+            &>* {
+                font-size: 27px;
+            }
+        }
+    }
+}

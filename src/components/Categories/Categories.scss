@@ -3,8 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: vw(37.3, 751) 0;
     &-img {
-        margin-top: vw(40.36, 751);
+        margin: vw(20.18, 751) 0;
         width: vw(666.65, 751);
         height: vw(500.46, 751);
         //max-width: 841.68px;
@@ -13,8 +14,12 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .Categories-img {
-        width: vw(448.9, 1024);
-        height: vw(337, 1024);
+    .Categories {
+        margin: vw(49.26, 1024) 0;
+        &-img {
+            width: vw(448.9, 1024);
+            height: vw(337, 1024);
+            margin: 0;
+        }
     }
 }

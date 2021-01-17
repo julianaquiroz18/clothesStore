@@ -17,13 +17,13 @@ class Navigation extends Component {
   }
   onSearchChanged(event) {
     this.setState({ searchValue: event.target.value });
-  }
+  };
   toggleMenu() {
     this.setState({ isMenuOpen: !this.state.isMenuOpen });
-  }
+  };
 
   render() {
-    const items = this.props.items.map((item) => <li>{item}</li>);
+    const items = this.props.items.map((item, index) => <li key={index}>{item}</li>);
     const menuClass = this.state.isMenuOpen ? "isOpen" : "";
     return (
       <div className="Navigation">
@@ -60,8 +60,8 @@ class Navigation extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 // class Navigation extends Component {
 //     render() {

@@ -1,0 +1,61 @@
+@import '../../utils/styles/functions.scss';
+.Carrousel {
+    &-title {
+        font-size: vw(44.2, 751);
+        margin: 0;
+    }
+    &-container {
+        position: relative;
+        margin: vw(44.21, 751) 0 vw(83.01, 751);
+        background-color: tomato;
+        &-buttons {
+            position: absolute;
+            width: 100%;
+            padding: 0 vw(73.23, 751);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            top: 50%;
+            & .button {
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                outline: none;
+                background-color: transparent;
+                font-size: vw(73.06, 751);
+                color: #AEAEA9;
+                font-weight: lighter;
+            }
+        }
+        &-cards {
+            width: 100vw;
+            overflow-x: scroll;
+        }
+    }
+    &-cardWrapper {
+        min-width: 100vw;
+        display: inline-flex;
+        justify-content: center;
+    }
+    &-cardsWrapper {
+        display: inline-flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Carrousel {
+        &-title {
+            font-size: vw(23.52, 1024);
+        }
+        &-container {
+            margin: vw(47.35, 1024) 0 vw(64.33, 1024);
+            &-buttons {
+                padding: 0 vw(32.55, 1024);
+                & i {
+                    font-size: vw(38.97, 1024);
+                }
+            }
+        }
+    }
+}

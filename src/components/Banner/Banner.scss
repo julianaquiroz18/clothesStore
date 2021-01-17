@@ -1,12 +1,12 @@
 @import '../../utils/styles/functions.scss';
 .Banner {
     position: relative;
-    &-buttons {
+    &-buttonsContainer {
         display: none;
     }
     &-img {
         width: 100%;
-        max-height: 862.85px;
+        height: vw(561.98, 751);
     }
     &-circles {
         position: absolute;
@@ -14,21 +14,29 @@
         display: flex;
         width: 100%;
         justify-content: center;
-        & div {
-            width: vw(37, 791);
-            height: vw(37, 791);
+        & button {
+            width: vw(37, 751);
+            height: vw(37, 751);
             max-width: 37px;
             max-height: 37px;
             border-radius: 50%;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            outline: none;
             background-color: white;
+            opacity: 0.44;
             margin: 0 6.89px;
+            &.active {
+                opacity: 1;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
     .Banner {
-        &-buttons {
+        &-buttonsContainer {
             position: absolute;
             width: 100%;
             padding: 0 vw(71.5, 1920);
@@ -36,11 +44,19 @@
             display: flex;
             justify-content: space-between;
             top: 50%;
-            & i {
+            & .button {
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                cursor: pointer;
+                outline: none;
                 font-size: vw(73.06, 1920);
                 color: #FFFFFF;
                 font-weight: lighter;
             }
+        }
+        &-img {
+            height: vw(386.87, 1024);
         }
     }
 }

@@ -90,7 +90,7 @@
 
 @media screen and (min-width: 1024px) {
     .Navigation {
-        margin-bottom: 100px;
+        margin-bottom: vw(100, 1920);
     }
     .menu {
         &-icon {
@@ -101,7 +101,7 @@
             position: absolute;
             top: 139px;
             width: 100%;
-            height: 100px;
+            height: vw(100, 1920);
             display: flex;
             transform: none;
         }
@@ -114,7 +114,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-size: 31.81px;
+            font-size: vw(31.81, 1920);
             color: white;
             margin: 0;
             & li {

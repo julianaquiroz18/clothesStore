@@ -2,7 +2,7 @@
 .Footer {
     background-color: black;
     color: white;
-    padding-top: vw(75, 791);
+    padding-top: vw(75, 751);
     &-information {
         display: flex;
         flex-direction: column;
@@ -25,11 +25,11 @@
             outline: none;
             background-color: black;
             color: white;
-            font-size: vw(32, 791);
+            font-size: vw(32, 751);
         }
         &-title {
-            margin: vw(35, 791) 0;
-            font-size: vw(33, 791);
+            margin: vw(35, 751) 0;
+            font-size: vw(33, 751);
             text-align: left;
         }
         &-list {
@@ -37,7 +37,7 @@
             text-align: left;
             display: none;
             padding: 0;
-            font-size: vw(26, 791);
+            font-size: vw(26, 751);
             &>* {
                 margin-bottom: 17.61px;
             }
@@ -49,12 +49,12 @@
     &-socialNetworks {
         display: inline-flex;
         margin-left: -10px;
-        margin-bottom: vw(124, 791);
+        margin-bottom: vw(124, 751);
         &-button {
-            width: vw(63, 791);
-            height: vw(63, 791);
+            width: vw(63, 751);
+            height: vw(63, 751);
             border: none;
-            padding: vw(12.2, 791);
+            padding: vw(12.2, 751);
             margin: 0 10px;
             background-color: white;
             cursor: pointer;
@@ -63,7 +63,7 @@
         }
     }
     &-copyRight {
-        font-size: vw(23, 791);
+        font-size: vw(23, 751);
         padding: 0 0 47px 0;
         margin: 0;
     }
