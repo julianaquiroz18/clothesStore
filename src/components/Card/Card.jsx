@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "./Card.scss";
-import img1 from "./imagenes_Mesa de trabajo 1 copia 2.jpg";
+
 
 class Card extends Component {
   constructor(props) {
@@ -19,13 +19,13 @@ class Card extends Component {
     return (
       <div className="Card">
         <div className="Card-imageContainer">
-          <div className="Card-imageContainer-discountTag">-50%</div>
-          <img className="Card-imageContainer-image" src={img1} alt="" />
+          <div className="Card-imageContainer-discountTag">{this.props.discountTag}</div>
+          <img className="Card-imageContainer-image" src={this.props.image} alt="" />
         </div>
-        <p className="Card-description">Blusa color solido manga larga</p>
+        <p className="Card-description">{this.props.title}</p>
         <div className="Card-prices">
-            <p className="Card-prices-old">$100.452</p>
-            <p className="Card-prices-new">$200.452</p>
+            <p className="Card-prices-old">{this.props.oldPrice}</p>
+            <p className="Card-prices-new">{this.props.newPrice}</p>
         </div>
       </div>
     );

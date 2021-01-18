@@ -1,47 +1,61 @@
-import { Component } from "react";
 import "./Carrousel.scss";
 import Card from "../Card/Card.jsx";
+import React, { useState, useEffect, createRef } from "react";
+import { getApiData } from "../../utils/scripts/api.js";
 
-class Carrousel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMenuOpen: false,
+function Carrousel(props) {
+  const scrollAreaReference = createRef();
+  const [products, setProducts] = useState([]);
+  const [getData, shouldGetProducts] = useState(true);
+
+  useEffect(() => {
+    if (getData) {
+      getApiData().then((data) => {
+        shouldGetProducts(false);
+        setProducts(data);
+      });
+    }
+  }, [getData]);
+
+  function scroll(direction){
+    const node = scrollAreaReference.current
+    const cardWidth = node.firstChild.clientWidth;
+    if (direction === 'left'){
+      node.scroll(node.scrollLeft - cardWidth, 0);
+    } else{
+      node.scroll(node.scrollLeft + cardWidth, 0);
     };
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
-  toggleMenu() {
-    this.setState({ isMenuOpen: !this.state.isMenuOpen });
-    console.log(this.state.isMenuOpen);
-  }
+  };
 
-  render() {
-    const cards = this.props.products.map((product) => {
-      return (
-        <div className="Carrousel-cardWrapper">
-          <Card />
-        </div>
-      );
-    });
+  const cards = products.map((product, index) => {
     return (
-      <div className="Carrousel">
-        <h2 className="Carrousel-title">PRODUCTOS MÁS BUSCADOS</h2>
-        <div className="Carrousel-container">
-          <div className="Carrousel-container-cards">              
-              {cards}            
-          </div>
-          <div className="Carrousel-container-buttons">
-            <button className="button">
-              <i className="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <button className="button">
-              <i className="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
-          </div>
-        </div>
+      <div key={index} className="Carrousel-cardWrapper">
+        <Card
+          image={product.image}
+          title={product.title}
+          oldPrice={product.oldPrice}
+          newPrice={product.newPrice}
+          discountTag={product.discountTag}
+        />
       </div>
     );
-  }
+  });
+  return (
+    <div className="Carrousel">
+      <h2 className="Carrousel-title">PRODUCTOS MÁS BUSCADOS</h2>
+      <div className="Carrousel-container">
+        <div ref={scrollAreaReference} className="Carrousel-container-cards">{cards}</div>
+        <div className="Carrousel-container-buttons">
+          <button className="button" onClick={()=>scroll('left')}>
+            <i className="fa fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button className="button" onClick={()=>scroll('right')}>
+            <i className="fa fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Carrousel;

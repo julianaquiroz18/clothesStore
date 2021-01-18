@@ -4,16 +4,18 @@ import cart from "./icon-cart.svg";
 import menu from "./icon-menu.svg";
 import cancel from "./icon-cancel.svg";
 import logo from "./logo.svg";
+import { SearchResultContext } from "../../contexts/searchResult";
 
 class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchValue: "Buscar aquí producto",
+      searchValue: "",
       isMenuOpen: false,
     };
     this.onSearchChanged = this.onSearchChanged.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.search = this.search.bind(this);
   }
   onSearchChanged(event) {
     this.setState({ searchValue: event.target.value });
@@ -21,9 +23,14 @@ class Navigation extends Component {
   toggleMenu() {
     this.setState({ isMenuOpen: !this.state.isMenuOpen });
   };
-
+  search(event) {
+    this.context.updateQueryValue(this.state.searchValue);
+    this.setState({ searchValue: "" });
+  };
+  static contextType = SearchResultContext;
   render() {
-    const items = this.props.items.map((item, index) => <li key={index}>{item}</li>);
+    const itemsArray=['Hombre', 'Mujer', 'Junior', 'Niños', 'Accesorios', 'Ofertas'];
+    const items = itemsArray.map((item, index) => <li key={index}>{item}</li>);
     const menuClass = this.state.isMenuOpen ? "isOpen" : "";
     return (
       <div className="Navigation">
@@ -44,9 +51,10 @@ class Navigation extends Component {
             value={this.state.searchValue}
             onChange={this.onSearchChanged}
             type="text"
+            placeholder="Buscar aquí producto"
             className="search-input"
           />
-          <button className="search-icon Navigation-button">
+          <button className="search-icon Navigation-button" onClick={this.search}>
             <i className="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
