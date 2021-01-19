@@ -1,7 +1,8 @@
 import "./Carrousel.scss";
 import Card from "../Card/Card.jsx";
-import React, { useState, useEffect, createRef } from "react";
 import { getApiData } from "../../utils/scripts/api.js";
+import React, { useState, useEffect, createRef } from "react";
+
 
 function Carrousel(props) {
   const scrollAreaReference = createRef();
@@ -17,15 +18,15 @@ function Carrousel(props) {
     }
   }, [getData]);
 
-  function scroll(direction){
-    const node = scrollAreaReference.current
+  function scroll(direction) {
+    const node = scrollAreaReference.current;
     const cardWidth = node.firstChild.clientWidth;
-    if (direction === 'left'){
+    if (direction === "left") {
       node.scroll(node.scrollLeft - cardWidth, 0);
-    } else{
+    } else {
       node.scroll(node.scrollLeft + cardWidth, 0);
-    };
-  };
+    }
+  }
 
   const cards = products.map((product, index) => {
     return (
@@ -41,20 +42,22 @@ function Carrousel(props) {
     );
   });
   return (
-    <div className="Carrousel">
+    <section className="Carrousel">
       <h2 className="Carrousel-title">PRODUCTOS MÁS BUSCADOS</h2>
       <div className="Carrousel-container">
-        <div ref={scrollAreaReference} className="Carrousel-container-cards">{cards}</div>
+        <div ref={scrollAreaReference} className="Carrousel-container-cards">
+          {cards}
+        </div>
         <div className="Carrousel-container-buttons">
-          <button className="button" onClick={()=>scroll('left')}>
+          <button className="button" onClick={() => scroll("left")}>
             <i className="fa fa-chevron-left" aria-hidden="true"></i>
           </button>
-          <button className="button" onClick={()=>scroll('right')}>
+          <button className="button" onClick={() => scroll("right")}>
             <i className="fa fa-chevron-right" aria-hidden="true"></i>
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

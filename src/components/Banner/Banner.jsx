@@ -4,7 +4,7 @@ import bannerDesktop from "./banner-principal.jpg";
 
 function Banner(props) {
   return (
-    <div className="Banner">
+    <section className="Banner">
       <div className="Banner-buttonsContainer">
         <button className="button">
           <i className="fa fa-chevron-left" aria-hidden="true"></i>
@@ -14,14 +14,14 @@ function Banner(props) {
         </button>
       </div>
       <picture>
-        <source srcSet={bannerDesktop} media="(min-width: 1024px)"/>
-        <img className="Banner-img" src={bannerMobile} alt="Banner Principal"/>
+        <source srcSet={bannerDesktop} media="(min-width: 1024px)" />
+        <img className="Banner-img" src={bannerMobile} alt="Banner Principal" />
       </picture>
       <div className="Banner-circles">
         <button className="active" />
-        <button/>
+        <button />
       </div>
-    </div>
+    </section>
   );
 }
 

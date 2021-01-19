@@ -1,6 +1,6 @@
 import { SearchResultContext } from "../../contexts/searchResult";
-import close from "./icon-cancel.svg";
 import { useContext } from "react";
+import close from "./icon-cancel.svg";
 import Card from "../Card/Card";
 
 import "./Modal.scss";

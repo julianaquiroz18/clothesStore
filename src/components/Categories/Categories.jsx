@@ -5,9 +5,11 @@ import kids from "./banner-moda-infantil.jpg";
 function Categories(props) {
   const categoriesImages = [kids, sportwears];
   const categories = categoriesImages.map((img, index) => (
-    <img key={index} className="Categories-img" src={img} alt="Imagen categorías" />
+    <article key={index}>
+      <img className="Categories-img" src={img} alt="Imagen categorías" />
+    </article>
   ));
-  return <div className="Categories">{categories}</div>;
+  return <section className="Categories">{categories}</section>;
 }
 
 export default Categories;

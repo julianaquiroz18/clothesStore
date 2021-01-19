@@ -7,13 +7,12 @@ import Footer from "../Footer/Footer.jsx";
 import { SearchResultProvider } from "../../contexts/searchResult.jsx";
 import { Modal } from "../Modal/Modal";
 
-
 function App() {
   return (
     <main className="App">
       <SearchResultProvider>
         <Navigation />
-        <Modal/>
+        <Modal />
       </SearchResultProvider>
       <Banner />
       <Categories />

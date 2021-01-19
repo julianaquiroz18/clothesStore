@@ -63,10 +63,11 @@
             border-radius: 50%;
         }
     }
-}
-
-.prueba {
-    width: 10px;
+    &-copyRight {
+        margin: 0;
+        padding-bottom: vw(46.66, 751);
+        font-size: vw(23, 751);
+    }
 }
 
 @media screen and (min-width: 1024px) {

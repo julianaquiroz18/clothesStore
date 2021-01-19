@@ -19,27 +19,37 @@ class Navigation extends Component {
   }
   onSearchChanged(event) {
     this.setState({ searchValue: event.target.value });
-  };
+  }
   toggleMenu() {
     this.setState({ isMenuOpen: !this.state.isMenuOpen });
-  };
+  }
   search(event) {
     this.context.updateQueryValue(this.state.searchValue);
     this.setState({ searchValue: "" });
-  };
+  }
   static contextType = SearchResultContext;
   render() {
-    const itemsArray=['Hombre', 'Mujer', 'Junior', 'Niños', 'Accesorios', 'Ofertas'];
+    const itemsArray = [
+      "Hombre",
+      "Mujer",
+      "Junior",
+      "Niños",
+      "Accesorios",
+      "Ofertas",
+    ];
     const items = itemsArray.map((item, index) => <li key={index}>{item}</li>);
     const menuClass = this.state.isMenuOpen ? "isOpen" : "";
     return (
-      <div className="Navigation">
+      <nav className="Navigation">
         <div className="menu">
           <button className="Navigation-button" onClick={this.toggleMenu}>
             <img src={menu} alt="menu-icon" className="menu-icon" />
           </button>
           <div className={`menu-dropdown ${menuClass}`}>
-            <button onClick={this.toggleMenu} className="menu-cancel Navigation-button">
+            <button
+              onClick={this.toggleMenu}
+              className="menu-cancel Navigation-button"
+            >
               <img src={cancel} alt="menu-cancel" />
             </button>
             <ul className="menu-list">{items}</ul>
@@ -54,22 +64,27 @@ class Navigation extends Component {
             placeholder="Buscar aquí producto"
             className="search-input"
           />
-          <button className="search-icon Navigation-button" onClick={this.search}>
+          <button
+            className="search-icon Navigation-button"
+            onClick={this.search}
+          >
             <i className="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
         <button className="cart-icon Navigation-button">
-          <img src={cart} alt="cart"/>
+          <img src={cart} alt="cart" />
         </button>
         <div className="login">
-        <i className="fa fa-user-circle-o login-icon" aria-hidden="true"></i>
-          
-          <button className="login-button Navigation-button">Iniciar sesión</button>
+          <i className="fa fa-user-circle-o login-icon" aria-hidden="true"></i>
+
+          <button className="login-button Navigation-button">
+            Iniciar sesión
+          </button>
         </div>
-      </div>
+      </nav>
     );
-  };
-};
+  }
+}
 
 // class Navigation extends Component {
 //     render() {

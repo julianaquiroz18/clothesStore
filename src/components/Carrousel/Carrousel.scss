@@ -33,7 +33,6 @@
         }
         &-cards {
             width: 85vw;
-            //overflow-x: scroll;
             overflow: hidden;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;

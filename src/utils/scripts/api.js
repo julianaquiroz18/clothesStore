@@ -27,7 +27,7 @@ export async function getApiData(value) {
             discountTag = "";
         };
         return {
-            image: thumbnail,
+            image: thumbnail.replace("-I.", "-V."),
             title: title,
             oldPrice: originalPrice,
             newPrice: currentPrice,
