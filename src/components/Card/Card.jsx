@@ -15,11 +15,13 @@ class Card extends Component {
     console.log(this.state.isMenuOpen);
   }
 
+  
   render() {
+    const tagColor = this.props.discountTag ? "purple" : "";
     return (
       <div className="Card">
         <div className="Card-imageContainer">
-          <div className="Card-imageContainer-discountTag">{this.props.discountTag}</div>
+          <div className={`Card-imageContainer-discountTag ${tagColor}`}>{this.props.discountTag}</div>
           <img className="Card-imageContainer-image" src={this.props.image} alt="" />
         </div>
         <p className="Card-description">{this.props.title}</p>

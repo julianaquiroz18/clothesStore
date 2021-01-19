@@ -72,18 +72,18 @@ class Footer extends Component {
           <div className="Footer-block">
             <h4 className="Footer-block-title">SÍGUENOS EN:</h4>
             <div className="Footer-socialNetworks">
-              <button className="Footer-socialNetworks-button">
-                <img src={facebook} alt="" />
-              </button>
-              <button className="Footer-socialNetworks-button">
-                <img src={twitter} alt="" />
-              </button>
-              <button className="Footer-socialNetworks-button">
-                <img src={instagram} alt="" />
-              </button>
-              <button className="Footer-socialNetworks-button">
-                <img src={youtube} alt="" />
-              </button>
+              <a href="https://www.facebook.com/" className="Footer-socialNetworks-button">
+                <img src={facebook} alt="Facebook link" />
+              </a>
+              <a href="https://www.twitter.com/" className="Footer-socialNetworks-button">
+                <img src={twitter} alt="Twitter link" />
+              </a>
+              <a href="https://www.instagram.com/" className="Footer-socialNetworks-button">
+                <img src={instagram} alt="Instagram link" />
+              </a>
+              <a href="https://www.youtube.com/" className="Footer-socialNetworks-button">
+                <img src={youtube} alt="Youtube" />
+              </a>
             </div>
           </div>
         </div>

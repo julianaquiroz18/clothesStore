@@ -51,6 +51,7 @@
         margin-left: -10px;
         margin-bottom: vw(124, 751);
         &-button {
+            box-sizing: border-box;
             width: vw(63, 751);
             height: vw(63, 751);
             border: none;
@@ -62,11 +63,10 @@
             border-radius: 50%;
         }
     }
-    &-copyRight {
-        font-size: vw(23, 751);
-        padding: 0 0 47px 0;
-        margin: 0;
-    }
+}
+
+.prueba {
+    width: 10px;
 }
 
 @media screen and (min-width: 1024px) {

@@ -1,17 +1,23 @@
 @import '../../utils/styles/functions.scss';
 .Card {
     width: vw(400, 751);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &-imageContainer {
         position: relative;
         &-discountTag {
             position: relative;
-            background-color: #5B17AA;
+            background-color: transparent;
             color: white;
             font-size: vw(22.52, 751);
             line-height: vw(35, 751);
             width: vw(87, 751);
             height: vw(35, 751);
             z-index: 2;
+            &.purple {
+                background-color: #5B17AA
+            }
         }
         &-image {
             margin-top: -(vw(35, 751));
