@@ -1,7 +1,17 @@
 # CLOTHES STORE
 
-This project was done using HTML, CSS, Sass, React and Javascript.
-   Author: julianaquiroz18   
+This project was done using HTML, CSS, Sass, React and Javascript. 
+
+Author: julianaquiroz18  
+
+## The challenge
+
+
+The challenge was to develop a React app connected with Mercado Libre's API, this app allows consult products from the Clothes and Accessories section and shows the results. 
+
+Dynamic sections are: 'Búsqueda' and 'Productos más buscados'.
+
+Original design: https://xd.adobe.com/view/ec7301fe-d1c7-4ba7-a4d6-3a408949d529-b920/grid 
 
 ## How to test it?
 Clone the repository and follow next steps:
@@ -26,14 +36,14 @@ Clone the repository and follow next steps:
     -d 'redirect_uri=https://www.mercadolibre.com.co/'
 ```
 
-2. Preparing enviroment:
+3. Preparing enviroment:
 ```bash
     #Rename file `sample.env` to `.env`
     mv sample.env .env       
 ```
    And now, update your .env file with the new `access_token` from the previous step response.
 
-3. Start application:
+4. Start application:
 ```bash 
     npm start
 ```
