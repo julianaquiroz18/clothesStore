@@ -37,11 +37,15 @@ class Navigation extends Component {
       "Accesorios",
       "Ofertas",
     ];
-    const items = itemsArray.map((item, index) => <li key={index}>{item}</li>);
+    const items = itemsArray.map((item, index) => (
+      <li key={index} className="menu-list-item">
+        <a href=" ">{item}</a>
+      </li>
+    ));
     const menuClass = this.state.isMenuOpen ? "isOpen" : "";
     return (
-      <nav className="Navigation">
-        <div className="menu">
+      <header className="Navigation">
+        <nav className="menu">
           <button className="Navigation-button" onClick={this.toggleMenu}>
             <img src={menu} alt="menu-icon" className="menu-icon" />
           </button>
@@ -54,7 +58,7 @@ class Navigation extends Component {
             </button>
             <ul className="menu-list">{items}</ul>
           </div>
-        </div>
+        </nav>
         <img src={logo} alt="logo" className="logo" />
         <div className="search">
           <input
@@ -81,7 +85,7 @@ class Navigation extends Component {
             Iniciar sesión
           </button>
         </div>
-      </nav>
+      </header>
     );
   }
 }

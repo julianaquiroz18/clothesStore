@@ -38,8 +38,12 @@
             display: none;
             padding: 0;
             font-size: vw(26, 751);
-            &>* {
+            &-item {
                 margin-bottom: 17.61px;
+            }
+            & a {
+                text-decoration: none;
+                color: white;
             }
             &.isOpen {
                 display: block;
@@ -107,7 +111,7 @@
             }
         }
         &-copyRight {
-            border: 1px solid white;
+            border-top: 1px solid white;
             padding: 27px 0;
             font-size: vw(12.26, 1024);
         }

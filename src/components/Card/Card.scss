@@ -9,14 +9,15 @@
         &-discountTag {
             position: relative;
             background-color: transparent;
-            color: white;
+            color: transparent;
             font-size: vw(22.52, 751);
             line-height: vw(35, 751);
             width: vw(87, 751);
             height: vw(35, 751);
             z-index: 2;
-            &.purple {
-                background-color: #5B17AA
+            &.with-discount {
+                background-color: #5B17AA;
+                color: white;
             }
         }
         &-image {
@@ -34,7 +35,8 @@
     &-prices {
         display: flex;
         justify-content: space-between;
-        &>* {
+        &-old,
+        &-new {
             font-size: vw(37.3, 751);
             margin: 0;
             padding: 0 2%;
@@ -69,7 +71,8 @@
             margin: vw(32.38, 1920) 0 vw(33.7, 1920);
         }
         &-prices {
-            &>* {
+            &-old,
+            &-new {
                 font-size: vw(27, 1920);
             }
         }

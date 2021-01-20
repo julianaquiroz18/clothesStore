@@ -45,11 +45,21 @@ class Footer extends Component {
               </button>
             </div>
             <ul className={`Footer-block-list ${policiesMenuClass}`}>
-              <li>Políticas de privacidad</li>
-              <li>Políticas de cambio</li>
-              <li>Políticas de envío</li>
-              <li>Términos y condiciones</li>
-              <li>Responsabilidad social</li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Políticas de privacidad</a>
+              </li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Políticas de cambio</a>
+              </li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Políticas de envío</a>
+              </li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Términos y condiciones</a>
+              </li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Responsabilidad social</a>
+              </li>
             </ul>
           </div>
           <div className="Footer-block">
@@ -66,9 +76,15 @@ class Footer extends Component {
               </button>
             </div>
             <ul className={`Footer-block-list ${aboutMenuClass}`}>
-              <li>Encuentra tu tienda</li>
-              <li>Contáctanos</li>
-              <li>Trabaja con nosotros</li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Encuentra tu tienda</a>
+              </li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Contáctanos</a>
+              </li>
+              <li className="Footer-block-list-item">
+                <a href=" ">Trabaja con nosotros</a>
+              </li>
             </ul>
           </div>
           <div className="Footer-block">
