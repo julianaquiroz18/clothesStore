@@ -6,7 +6,14 @@ This project was done using HTML, CSS, Sass, React and Javascript.
 ## How to test it?
 Clone the repository and follow next steps:
 
-1. Get Mercado Libre new Token
+1. Install dependencies:
+```bash
+    cd clothes-store
+    npm install
+```
+
+2. Run the following command to get Mercado Libre's new Token. 
+   You will use the response in next steps.
 ```bash
     curl -X POST \
     -H 'accept: application/json' \
@@ -19,26 +26,15 @@ Clone the repository and follow next steps:
     -d 'redirect_uri=https://www.mercadolibre.com.co/'
 ```
 
-2. Install dependencies:
-```bash
-    npm install
-```
-
 2. Preparing enviroment:
 ```bash
     #Rename file `sample.env` to `.env`
-    mv sample.env .env 
-    #Modify your .env information 
+    mv sample.env .env       
 ```
+   And now, update your .env file with the new `access_token` from the previous step response.
 
-3. Install Back-end dependencies and start server:
-```bash
-    #Install dependencies
-    npm install
-    #Initialize data base
-    #Note: Admin email and password would be provided  
-    node bootstraping.js 
-    #Initialize server
-    npx nodemon server.js
+3. Start application:
+```bash 
+    npm start
 ```
 
