@@ -26,14 +26,14 @@ Clone the repository and follow next steps:
    You will use the response in next steps.
 ```bash
     curl -X POST \
+    curl -X POST \
     -H 'accept: application/json' \
     -H 'content-type: application/x-www-form-urlencoded' \
     'https://api.mercadolibre.com/oauth/token' \
-    -d 'grant_type=authorization_code' \
+    -d 'grant_type=refresh_token' \
     -d 'client_id=1523441364517935' \
     -d 'client_secret=OBlQJ9wIh8uGPyHfiFYSFW08DuvYdTSQ' \
-    -d 'code=TG-6004b08cf1b1f60006a52dea-359798454' \
-    -d 'redirect_uri=https://www.mercadolibre.com.co/'
+    -d 'refresh_token=TG-6004b0c09cd0000006188f52-359798454'
 ```
 
 3. Preparing enviroment:
