@@ -7,7 +7,7 @@ Author: julianaquiroz18
 ## The challenge
 
 
-The challenge was to develop a React app connected with Mercado Libre's API, this app allows consult products from the Clothes and Accessories section and shows the results. 
+The challenge was to develop a React app connected with Mercado Libre's API, this app allows consulting products from the Clothes and Accessories section and shows the results. 
 
 Dynamic sections are: 'Búsqueda' and 'Productos más buscados'.
 
