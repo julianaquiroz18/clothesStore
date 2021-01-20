@@ -1,4 +1,4 @@
-const TOKEN = 'APP_USR-1523441364517935-011922-aeb5956e552c31957f5d7ceac05705a4-359798454';
+const TOKEN = process.env.ACCES_TOKEN;
 const BASE_URL = 'https://api.mercadolibre.com/sites/MCO/search?category=MCO1430&limit=20'
 const headers = {
     headers: { 'Authorization': `Bearer ${TOKEN}` }
