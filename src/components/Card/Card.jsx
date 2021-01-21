@@ -2,18 +2,7 @@ import { Component } from "react";
 import "./Card.scss";
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMenuOpen: false,
-    };
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
-  toggleMenu() {
-    this.setState({ isMenuOpen: !this.state.isMenuOpen });
-    console.log(this.state.isMenuOpen);
-  }
-
+  
   render() {
     const tagColor = this.props.discountTag ? "with-discount" : "";
     const symbol = this.props.oldPrice ? "$" : "";
